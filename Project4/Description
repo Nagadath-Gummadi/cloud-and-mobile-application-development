@@ -1,0 +1,22 @@
+Creating a SQL Database
+
+I.	Log into the Windows Azure Management Portal.
+II.	In the Home Page choose Create a Resource.						 	
+III.	Click Databases and then SQL Database.						 
+IV.	Select Subscription and Resource group from the dropdown list.			 
+V.	Enter Database name and the name should be unique.	
+VI.	For server click create new.
+VII.				 
+VIII.	Enter server name must be unique, server admin login details  and create valid password and select location and press ok.						
+IX.	Click on configure database select compute tier serverless and down data max size to 1GB and press apply.								 	
+X.	Press Review+create.									 
+XI.	Click on create.										 
+XII.	Go to your created resource and press set server firewall. 				 
+XIII.	Click on Add client IP.								 
+XIV.	Click save.  				
+     
+
+
+
+
+
