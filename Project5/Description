@@ -1,0 +1,66 @@
+Creating a virtual machine and connecting to its Sql server from local system
+1.Log on to azure portal. https://portal.azure.com 
+2.From the Navigation pane, select “Virtual Machines”. 
+ 
+3.Click on “Add” to create a new virtual machine from the available templates. 
+ 
+4.Let us assume that, we are selecting “SQL Server 2016 SP1 Enterprise on Windows Server 2016” from the available templates. 
+ 
+5.Change the pricing options.
+ 
+6.Configure the basic settings of virtual machine: 
+a.	Name of the virtual machine. 
+b.	Username. 
+c.	Password. 
+d.	Type of subscription. 
+e.	Resource group. 
+f.	Data centre location. 
+ 
+ 
+ 
+7.Click on “Next” to continue. 
+8.Configure the optional features of virtual machine. 
+9.In SQL Server Settings,Enable Sql Authorization and provide username, password.
+10.Click on “Review+Create” to create the virtual machine. 
+
+ 
+11.Click on “Create”
+ 
+12.After the virtual machine is created, click on “Connect” to use the created virtual machine. 
+ 
+13.A “Remote Desktop Protocol” file (rdp) was automatically created for the virtual machine. 
+14.Open that file and click on “Connect”. 
+ 
+15.Log on to virtual machine by using “Administrator credentials”. 
+16.Click “Yes” to verify the identity of virtual machine. 
+ 
+17.If we want to make use of any service on virtual machine, we must open a TCP port by creating an end point. 
+18.Open run command and enter “wf.msc”. 
+19.In “Windows firewall with advanced security”, Select “Inbound rules” and click on “New rule”. 
+20.Select “Port” from the available options and define the port no as “1433”. 
+21.Define the name of rule and click on “Ok’ to add the rule.
+  
+22.Open “Sql Server management studio” on virtual machine, we can log on using only one mode (i.e) “Windows Authentication” (By default). 
+23.To enable “Sql server Authentication” mode, log on to sql server using “Windows Authentication” mode. 
+24.In Object explorer, right-click on “Server name” and go to “Properties”. 
+25.Expand “Security” and expand “Logins” and right-click on “sa” and go to “Properties”. 
+26.In “General”, set a strong password for “sa” login and click on “Status” and change the “Login” setting as “Enabled”. 
+ 
+26.To save changes, right-click on “Server name”, select “Restart”. 
+ 
+
+27.Now, log on to sql server using “Sql server authentication” mode. 
+28.If we want to use the service locally, we need to create an end point on “Windows Azure” portal. 
+29.Log on to azure portal. https://portal.azure.com 
+30.Select the created virtual machine and then select “End points” from the available options. 
+31.Click on “Add” to add a new end point and define the following information: 
+a.	Name of the end point. 
+b.	Type of protocol. 
+c.	Public and private port no. (Default port no 1433) 
+d.	Click on “Ok”.
+32.Copy the DNS name of virtual machine or IP address and paste it on server name, while we are log on to “SQL server management studio” locally. 
+ 
+33.Select “SQL server” authentication mode and define the credentials as same as sql server management studio of virtual machine. 
+34.Create a database and make use of it with any web application. 
+35.Connect to the Virtual Machine Sql in the local machine by giving the credentials.
+ 
