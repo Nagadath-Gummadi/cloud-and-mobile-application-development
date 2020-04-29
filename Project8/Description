@@ -1,1 +1,30 @@
-v
+Creating a service bus:
+To use a Service Bus and perform operations, you need a Virtual machine. You can create a by following these steps.
+I.	Log into the Windows Azure Management Portal. 
+ 
+II.	Now Go to CreateResource And Select Integration.
+ 
+III.	In the Integration Tab, Select Service Bus.
+ 
+IV.	After The Service Bus is Selected it immediately asks for Some basic Details such as your Service Bus or Namespace name, Price Tier, Subscription type, Resource Group and the location of the ServiceBus Enter a Valid for your Namespace(i.e.., Service Bus) Which should not Contain Special Symbols.
+V.	Select The Price Tier as Basic For Relays and Queues. If You Want to Create a Service Bus for Topics Standard price tier is best.
+VI.	Select your Subscription Type.
+VII.	In Resource Group, If you have a existing Resource Group then select it. Otherwise Create a new One Where its Name Length Must be in between 12 to 128.
+VIII.	Then select Location.
+ 
+IX.	Then Click on go to resource and Select Shared Access Policies.
+ 
+X.	In that The Appeared Tab will be your Service Bus Key Name.
+XI.	Select That Key Name and the Primary Key Value Wiil be your Key to access the Service Bus.
+ 
+Procedure For Installing WindowsAzure.ServiceBus in Our :
+
+I.	I . First Open Your Application in Visual Studio.
+
+II.	Then Click on the Tools tab on the top bar
+III.	Then select the nugget package Manager
+
+IV.	In that nugget package manager Tab, select package manager console
+
+
+V.	In the Console Type as follows Install-Package WindowsAzure.ServiceBus -version3.3.2. and Click on Enter.The Package will be Installed.
